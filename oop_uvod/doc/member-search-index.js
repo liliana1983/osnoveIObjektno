@@ -1,0 +1,1 @@
+memberSearchIndex = [{"p":"oop_oblik","c":"Figura","l":"racunajObim()"},{"p":"oop_oblik","c":"Figura","l":"racunajPovrsinu()"}];updateSearchResults();

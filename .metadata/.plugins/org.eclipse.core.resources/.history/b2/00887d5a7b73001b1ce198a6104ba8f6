@@ -1,0 +1,76 @@
+package oop_uvod;
+
+public class racunarGlavni {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Racunar komp[] = new Racunar[5];
+		int i,j;
+		double ind=0;
+		double a[]=new double [5];
+		double tmp;
+		komp [0]= new Racunar ("komp1",5,5);
+		komp [1]=new Racunar ("komp2",2,2);
+		komp [2]=new Racunar ("komp3",3,3);
+		komp [3]=new Racunar ("komp4",4,4);
+		komp [4]=new Racunar ("komp5",5,5);
+		for (i=0;i<5;i++){
+			ind=komp[i].racunanjeIndeksa();
+			a[i]=ind;
+			}
+		for (i=0;i<5;i++) {
+			komp[i].stampajIndeksPerformansi();
+		}
+		
+		for (i=0; i < 4; i++) {
+		    for (j=i+1; j < 5; j++) {
+		      if (a[i] > a[j]) {
+		        tmp = a[i];
+		        a[i] = a[j];
+		        a[j] = tmp;
+		      }}
+		  System.out.println();
+
+		  System.out.println(" Cene racunara od najjeftinijeg do najskupljeg su: "+(i+1);}
+		  System.out.print(" { ");
+		  for (i = 0; i < 5; i++)
+		    System.out.print(a[i] +" ");
+		    System.out.println(" } ");
+			}
+		
+			
+	
+/*
+		komp.postavljanjeNazivaProcesora("komp1");
+		drugi.postavljanjeNazivaProcesora("komp2");
+		treci.postavljanjeNazivaProcesora("komp3");
+		cetvrti.postavljanjeNazivaProcesora("komp4");
+		peti.postavljanjeNazivaProcesora("komp5");
+		komp.postavljanjeKapaciteta(1);
+		drugi.postavljanjeKapaciteta(2);
+		treci.postavljanjeKapaciteta(3);
+		cetvrti.postavljanjeKapaciteta(4);
+		peti.postavljanjeKapaciteta(5);
+		komp.unosRadnogTakta(1);
+		drugi.unosRadnogTakta(2);
+		treci.unosRadnogTakta(3);
+		cetvrti.unosRadnogTakta(4);
+		peti.unosRadnogTakta(5);
+		s1=komp.racunanjeIndeksa();
+		s2=drugi.racunanjeIndeksa();
+		s3=treci.racunanjeIndeksa();
+		s4=cetvrti.racunanjeIndeksa();
+		s5=peti.racunanjeIndeksa();
+		
+		komp.stampajIndeksPerformansi();
+		drugi.stampajIndeksPerformansi();
+		treci.stampajIndeksPerformansi();
+		cetvrti.stampajIndeksPerformansi();
+		peti.stampajIndeksPerformansi();
+		
+		
+		System.out.println(r);*/
+	}
+	
+
+

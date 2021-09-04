@@ -1,0 +1,4 @@
+krastavac salata  200.0
+sladoled desert  100.0
+kokaKola pice  100.0
+pasulj glavnoJelo  300.0

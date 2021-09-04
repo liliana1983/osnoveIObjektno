@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes","u":"allclasses-index.html"},{"p":"oop_oblik","l":"Figura"}];updateSearchResults();

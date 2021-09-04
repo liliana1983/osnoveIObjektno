@@ -1,0 +1,78 @@
+package elektronsko_poslovanje;
+
+public class SpisakZaposlenih {
+
+	public int maxBrojZaposlenih = 100;
+	Zaposleni[] nazivZaposlenog;
+	public int trenutniBrojZaposlenih;
+
+	SpisakZaposlenih() {
+	}
+
+	SpisakZaposlenih(int maxBrojZaposlenih) {
+		this.maxBrojZaposlenih = maxBrojZaposlenih;
+		this.nazivZaposlenog = new Zaposleni[maxBrojZaposlenih];
+		this.trenutniBrojZaposlenih = 0;
+	}
+
+	public void dodajZaposlenog(Zaposleni nazivZaposlenog) {
+		if (trenutniBrojZaposlenih < maxBrojZaposlenih) {
+			this.nazivZaposlenog[this.trenutniBrojZaposlenih++] = nazivZaposlenog;
+			System.out.println("Uspesno dodat zaposleni " + nazivZaposlenog + "!");
+		} else {
+			System.out.println("Nema vise mesta u firmi!");
+		}
+	}
+
+	public int nadjiZaposlenog(String ime, String prezime) {
+		for (int i = 0; i < this.trenutniBrojZaposlenih; i++)
+			if (this.nazivZaposlenog[i].getIme().equals(ime) && this.nazivZaposlenog[i].getPrezime().equals(prezime))
+				return i;
+		System.out.println("Nije pronadjen zaposleni tog imena i prezimena");
+		return -1;
+
+	}
+
+	public void sortirajZaposlene() {
+		for (int i =0;i<maxBrojZaposlenih-1;i++) {
+			for(int j=i+1;j<maxBrojZaposlenih;j++) {
+				Object Zaposleni;
+				if(nazivZaposlenog[i].getIme().compareToIgnoreCase(nazivZaposlenog[j].getIme())>0)
+					Zaposleni temp = nazivZaposlenog[i];
+				nazivZaposlenog[i]=nazivZaposlenog[j];
+				nazivZaposlenog[j]=temp;}}
+			}
+
+	}
+
+public String izbaciZaposlenog(String ime, String prezime) {
+		this.ime=ime;
+		this.prezime=prezime;
+		return (this.ime + this.prezime)
+	}
+
+	private boolean izbaciZaposlenog(int index) {
+
+		if (index == -1)
+			return false;
+
+		for (int i = index; i < trenutniBrojZaposlenih - 1; i++)
+			nazivZaposlenog[i] = nazivZaposlenog[i + 1];
+
+		trenutniBrojZaposlenih--;
+
+		return true;
+	}
+
+	public void stampaj(String label) {
+
+		System.out.println(label + ", spisak : ");
+
+		for (int i = 0; i < trenutniBrojOsoba(); i++)
+			System.out.println(osoba(i));
+
+		System.out.println();
+	}
+}
+
+}

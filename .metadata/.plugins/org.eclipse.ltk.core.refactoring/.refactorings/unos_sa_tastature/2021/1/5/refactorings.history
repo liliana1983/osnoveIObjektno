@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;unos_sa_tastature&apos;&#x0D;&#x0A;- Original project: &apos;unos_sa_tastature&apos;&#x0D;&#x0A;- Original element: &apos;unos_sa_tastature.TextIO.java&apos;" description="Delete element" element1="/src&lt;unos_sa_tastature{TextIO.java" elements="1" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1611741232509" subPackages="false" version="1.0"/>
+</session>
